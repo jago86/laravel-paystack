@@ -3,11 +3,14 @@
 namespace Unicodeveloper\Paystack\Test;
 
 use Mockery as m;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class HelpersTest extends TestCase {
 
     protected $paystack;
+
+    protected $mock;
 
     public function setUp(): void
     {
@@ -23,9 +26,9 @@ class HelpersTest extends TestCase {
     /**
      * Tests that helper returns
      *
-     * @test
      * @return void
      */
+    #[Test]
     function it_returns_instance_of_paystack () {
 
         $this->assertInstanceOf("Unicodeveloper\Paystack\Paystack", $this->paystack);

@@ -22,6 +22,8 @@ class PaystackTest extends TestCase
 {
     protected $paystack;
 
+    protected $mock;
+
     public function setUp(): void
     {
         $this->paystack = m::mock('Unicodeveloper\Paystack\Paystack');
